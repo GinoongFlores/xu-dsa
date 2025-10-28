@@ -8,8 +8,10 @@ public class o1 {
      * ! Understanding O(1) Time Complexity
      * ? Key Characteristics:
      * Constant Time: The time taken does not depend on the input size
+     *
      * Predictable Performance: Always takes the same amount of time regardless of
      * data size
+     *
      * Direct Operations: No loops or recursion that depend on input size
      *
      * Examples:
