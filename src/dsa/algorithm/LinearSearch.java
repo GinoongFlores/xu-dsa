@@ -3,39 +3,42 @@ package dsa.search;
 public class LinearSearch {
 
     /**
-     * Linear search implementation as shown in the diagram
+     * Linear Search
      *
-     * @param A array to search in
-     * @param n size of the array
-     * @param x value to search for
-     * @return index of x if found, -1 otherwise
+     * What it does:
+     * - Look at each item from left to right until we find the number.
+     *
+     * When to use:
+     * - The list is small, or it is not sorted.
+     *
+     * Time idea:
+     * - Best case: found at the start.
+     * - Worst case: check all items.
      */
     public static int linearSearch(int[] A, int n, int x) {
-        // Iterate through each element of the array
+        // Check each position one by one
         for (int i = 0; i < n; i++) {
-            // If the current element equals the search value
+            // Is this the number we want?
             if (A[i] == x) {
-                // Return the index where found
+                // Yes → return this index (the first match)
                 return i;
             }
         }
-        // Return -1 if the value is not found
+        // Not found anywhere
         return -1;
     }
 
     public static void main(String[] args) {
-        // Example array from your image
+        // Example list (does not have to be sorted for linear search)
         int[] A = { 2, 6, 13, 21, 36, 47, 63, 81, 97 };
         int n = A.length;
 
-        // Test cases
-        int x1 = 81;
-        int x2 = 25;
-        int x3 = 21;
+        // Numbers to look for
+        int x1 = 81;  // present near the end
+        int x2 = 25;  // not present
+        int x3 = 21;  // present near the middle
 
-        // Search for each value and display results
-        // Store the result of each search in a variable so we only run the search once
-        // and print a stable, easy-to-read message.
+        // Run the search once per number and print a clear message
         int res1 = linearSearch(A, n, x1);
         System.out.println("Searching for " + x1 + ": " +
                 (res1 != -1 ? "Yes (at index " + res1 + ")" : "No"));
@@ -48,10 +51,9 @@ public class LinearSearch {
         System.out.println("Searching for " + x3 + ": " +
                 (res3 != -1 ? "Yes (at index " + res3 + ")" : "No"));
 
-        // Performance characteristics
-        System.out.println("\nPerformance characteristics:");
-        System.out.println("Best case: 1 comparison (when element is at the beginning)");
-        System.out.println("Worst case: n comparisons (when element is at the end or not present)");
-        System.out.println("Time complexity: O(n)");
+        // Quick recap while the program runs
+        System.out.println("\nHow many items might we check?");
+        System.out.println("- Best case: 1 item (found right away)");
+        System.out.println("- Worst case: all items (or not found at all)");
     }
 }
