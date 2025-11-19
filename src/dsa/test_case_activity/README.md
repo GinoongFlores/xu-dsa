@@ -10,6 +10,16 @@ This activity provides hands-on practice with three fundamental data structures 
 
 Each topic includes **3 progressive test cases** that increase in difficulty, helping you build understanding step by step.
 
+## Submission Information
+
+This activity is part of a Moodle e-learning assignment. For complete submission instructions, grading rubric, and important notes about the in-class presentation, please refer to the activity page in Moodle.
+
+**Quick Submission Checklist:**
+
+- Complete all three starter files (Stack, BST, Bubble Sort)
+- Fill out the `EXPLANATION` section at the bottom of each file
+- Submit your three completed files via Moodle (or share OnlineGDB links if using an online IDE)
+
 ## How to Use This Activity
 
 ### Step 1: Choose Your Language
@@ -30,18 +40,19 @@ Each topic includes **3 progressive test cases** that increase in difficulty, he
 - Check if your implementation passes all test cases
 - Review the expected outputs to understand what each test validates
 
-### Step 4: Check Solutions (After Attempting)
+### Step 4: Write Your Explanation
 
-- Once you've tried implementing, check the `solutions/` folder
-- Compare your approach with the reference solutions
-- Understand different implementation strategies
+- At the bottom of each starter file, fill out the `EXPLANATION` section
+- Write your own explanation of how you solved the problem
+- Explain your thought process and the data structures you used
+- This demonstrates your understanding of the code
 
 ## Important Notes
 
-- **Try first, then check solutions**: Attempt to solve the problems before looking at solutions
 - **Understand, don't copy**: The goal is to learn the concepts, not just pass tests
 - **Test incrementally**: Implement one method at a time and test it
 - **Read the comments**: They contain helpful hints and explanations
+- **Write your own explanation**: After implementing, explain your solution in your own words to demonstrate understanding
 
 ---
 
@@ -228,47 +239,22 @@ A game has a list of player scores that are all jumbled up: `[45, 10, 90, 25]`. 
 
 ---
 
-## Folder Structure
-
-```
-test_case_activity/
-├── README.md                    # This file - complete documentation
-├── java/
-│   ├── starter/                 # Student problem files (work on these!)
-│   │   ├── StackStarter.java
-│   │   ├── BSTStarter.java
-│   │   └── BubbleSortStarter.java
-│   └── solutions/               # Reference solutions (check after attempting)
-│       ├── StackSolution.java
-│       ├── BSTSolution.java
-│       └── BubbleSortSolution.java
-└── python/
-    ├── starter/                 # Student problem files (work on these!)
-    │   ├── stack_starter.py
-    │   ├── bst_starter.py
-    │   └── bubble_sort_starter.py
-    └── solutions/               # Reference solutions (check after attempting)
-        ├── stack_solution.py
-        ├── bst_solution.py
-        └── bubble_sort_solution.py
-```
-
 ## Tips for Success
 
 1. **Start with Test Case 1**: It's designed to be easy - get it working first!
 2. **Read the comments**: They explain the real-world context and provide hints
 3. **Test incrementally**: Implement one method, test it, then move to the next
 4. **Trace through examples**: Draw out the data structure (stack, tree, array) to visualize what's happening
-5. **Don't give up**: If stuck, review the concept, then try again before checking solutions
+5. **Don't give up**: If stuck, review the concept, then try again
 
 ## Learning Objectives
 
 By completing these activities, you will:
 
-- ✅ Understand the LIFO principle and stack operations
-- ✅ Learn how binary search trees organize and search data efficiently
-- ✅ Master the bubble sort algorithm and sorting fundamentals
-- ✅ Practice handling edge cases and error conditions
-- ✅ Build confidence in implementing data structures from scratch
+- Understand the LIFO principle and stack operations
+- Learn how binary search trees organize and search data efficiently
+- Master the bubble sort algorithm and sorting fundamentals
+- Practice handling edge cases and error conditions
+- Build confidence in implementing data structures from scratch
 
 Good luck! Remember: the goal is understanding, not just passing tests. Take your time and truly grasp each concept.
