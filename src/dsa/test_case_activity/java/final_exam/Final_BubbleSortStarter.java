@@ -1,0 +1,190 @@
+import java.util.Arrays;
+
+/**
+ * Bubble Sort Activity: High Score Leaderboard
+ *
+ * REAL-WORLD CONTEXT:
+ * A game has a list of player scores that are all jumbled up.
+ * To display a proper leaderboard, we need to sort them from
+ * lowest to highest. Bubble Sort is a simple algorithm that
+ * "bubbles" the largest values to the end.
+ *
+ * HOW BUBBLE SORT WORKS:
+ * - Compare adjacent elements
+ * - Swap if they're in wrong order
+ * - Repeat until no more swaps are needed
+ * - Largest values "bubble" to the end in each pass
+ *
+ * YOUR TASK:
+ * Implement the bubbleSort method to make all test cases pass.
+ */
+
+public class Final_BubbleSortStarter {
+    
+    /**
+     * Sorts an array of scores in ascending order using bubble sort.
+     * Used by: Test Case 1, Test Case 2, Test Case 3
+     * 
+     * @param scores The array of scores to sort
+     * @return A new sorted array
+     */
+    public int[] bubbleSort(int[] scores) {
+        // TODO: Implement bubble sort algorithm
+        // Hint: Follow the pattern described in the Javadoc comment above
+        //       Create a copy first, then sort it using nested loops
+        
+        // Create a copy to avoid modifying the original
+        int[] sorted = Arrays.copyOf(scores, scores.length);
+        
+        // TODO: Implement the bubble sort logic here
+        // Hint: Use nested loops:
+        //   - Outer loop: number of passes (sorted.length - 1)
+        //   - Inner loop: compare adjacent elements (sorted.length - 1 - i)
+        //   - If sorted[j] > sorted[j+1], swap them using a temporary variable
+        // Example structure:
+        // for (int i = 0; i < sorted.length - 1; i++) {
+        //     for (int j = 0; j < sorted.length - 1 - i; j++) {
+        //         if (sorted[j] > sorted[j + 1]) {
+        //             // Swap: use a temporary variable
+        //             // int temp = sorted[j];
+        //             // sorted[j] = sorted[j + 1];
+        //             // sorted[j + 1] = temp;
+        //         }
+        //     }
+        // }
+        
+        // This is intentionally incorrect - returns unsorted array
+        return sorted; // TODO: Replace this - implement proper bubble sort
+    }
+    
+    // ============================================
+    // TEST CASES - Already implemented below
+    // Just run this file to test your implementation
+    // 
+    //  IMPORTANT: DO NOT MODIFY OR TOUCH THE TEST CASE CODE BELOW 
+    // The test cases are already complete and should remain unchanged.
+    // Only modify the TODO sections in the class methods above.
+    // ============================================
+    
+    public static boolean testCase1() {
+        System.out.println("=".repeat(50));
+        System.out.println("TEST CASE 1: Two Elements (Easy)");
+        System.out.println("=".repeat(50));
+        
+        Final_BubbleSortStarter sorter = new Final_BubbleSortStarter();
+        
+        int[] input = {30, 10};
+        System.out.println("Input: " + Arrays.toString(input));
+        
+        int[] result = sorter.bubbleSort(input);
+        int[] expected = {10, 30};
+        
+        System.out.println("Expected: " + Arrays.toString(expected));
+        System.out.println("Got: " + Arrays.toString(result));
+        
+        boolean passed;
+        if (Arrays.equals(result, expected)) {
+            System.out.println("[PASS] - Test Case 1");
+            passed = true;
+        } else {
+            System.out.println("[FAIL] - Test Case 1");
+            passed = false;
+        }
+        System.out.println();
+        return passed;
+    }
+    
+    public static boolean testCase2() {
+        System.out.println("=".repeat(50));
+        System.out.println("TEST CASE 2: Jumbled List (Moderate)");
+        System.out.println("=".repeat(50));
+        
+        Final_BubbleSortStarter sorter = new Final_BubbleSortStarter();
+        
+        int[] input = {45, 10, 90, 25};
+        System.out.println("Input: " + Arrays.toString(input));
+        
+        int[] result = sorter.bubbleSort(input);
+        int[] expected = {10, 25, 45, 90};
+        
+        System.out.println("Expected: " + Arrays.toString(expected));
+        System.out.println("Got: " + Arrays.toString(result));
+        
+        boolean passed;
+        if (Arrays.equals(result, expected)) {
+            System.out.println("[PASS] - Test Case 2");
+            passed = true;
+        } else {
+            System.out.println("[FAIL] - Test Case 2");
+            passed = false;
+        }
+        System.out.println();
+        return passed;
+    }
+    
+    public static boolean testCase3() {
+        System.out.println("=".repeat(50));
+        System.out.println("TEST CASE 3: Reverse Sorted (Harder)");
+        System.out.println("=".repeat(50));
+        
+        Final_BubbleSortStarter sorter = new Final_BubbleSortStarter();
+        
+        int[] input = {40, 30, 20, 10};
+        System.out.println("Input: " + Arrays.toString(input));
+        
+        int[] result = sorter.bubbleSort(input);
+        int[] expected = {10, 20, 30, 40};
+        
+        System.out.println("Expected: " + Arrays.toString(expected));
+        System.out.println("Got: " + Arrays.toString(result));
+        
+        boolean passed;
+        if (Arrays.equals(result, expected)) {
+            System.out.println("[PASS] - Test Case 3 (correctly sorted reverse-ordered data)");
+            passed = true;
+        } else {
+            System.out.println("[FAIL] - Test Case 3 (should sort from highest to lowest)");
+            passed = false;
+        }
+        System.out.println();
+        return passed;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("\n" + "=".repeat(50));
+        System.out.println("BUBBLE SORT TEST CASES - High Score Leaderboard");
+        System.out.println("=".repeat(50) + "\n");
+        
+        boolean result1 = testCase1();
+        boolean result2 = testCase2();
+        boolean result3 = testCase3();
+        
+        System.out.println("=".repeat(50));
+        System.out.println("TEST SUMMARY");
+        System.out.println("=".repeat(50));
+        System.out.println("Test Case 1: " + (result1 ? "[PASS]" : "[FAIL]"));
+        System.out.println("Test Case 2: " + (result2 ? "[PASS]" : "[FAIL]"));
+        System.out.println("Test Case 3: " + (result3 ? "[PASS]" : "[FAIL]"));
+        System.out.println("=".repeat(50));
+        
+        if (result1 && result2 && result3) {
+            System.out.println("All test cases PASSED!");
+        } else {
+            System.out.println("Some test cases FAILED. Complete the TODO sections to fix them.");
+        }
+        System.out.println("=".repeat(50));
+    }
+}
+
+/*
+============================================
+TODO: EXPLANATION
+============================================
+
+Write a brief explanation of how you solved the problem.
+What was your thought process? What data structures did you use and why?
+
+1. Bubble Sort Logic: [Your explanation here]
+
+*/
+
